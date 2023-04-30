@@ -1,0 +1,17 @@
+{%extends "base.html" %}
+
+<!-- Template Inheritance: The following is a child element to the block in base.html -->
+{%block content%}
+
+{% if user.is_authenticated %}
+<p>This user is authenticated</p>
+{% endif %}
+
+{% for a in my_list %}
+    <li>{{a}}</li>
+{% endfor %}
+
+{{authentication_error}}
+
+<p>This is a website to show my work</p>
+{%endblock content%}
