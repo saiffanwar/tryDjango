@@ -24,14 +24,5 @@ def pdf_page(request):
     context = {"title": "PDF Page"}
     template_name = "hello_world.html"
     template_obj = get_template(template_name)
-    
+
     return HttpResponse(template_obj.render(context))
-
-def pdf_view(request):
-    try:
-        return FileResponse(open('main.pdf', 'rb'), content_type='application/pdf')
-    except FileNotFoundError:
-        raise Http404()
-
-
-

@@ -17,18 +17,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path
 from .views import (
-    home_page, 
-    about_page, 
+    home_page,
+    about_page,
     contact_page,
-    pdf_view
 )
-from portfolio.views import document_detail_page
+from portfolio.views import portfolio_detail
 
 urlpatterns = [
     path("saif-admin/", admin.site.urls),
+    path("home/", home_page, name="home"),
     path("", home_page, name="home"),
     path("about/", about_page, name="about"),
     path("contact/", contact_page, name="contact"),
-    path("pdf/", pdf_view, name="pdf"),
-    path("portfolio/", document_detail_page, name="portfolio")
+    # path("portfolio", portfolio_detail, name="portfolio")
+    path("portfolio/<str:doc_slug>", portfolio_detail, name="portfolio")
 ]
