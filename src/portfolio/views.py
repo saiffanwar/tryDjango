@@ -5,7 +5,6 @@ from .models import PortfolioDoc
 # Create your views here.
 def portfolio_detail(request, doc_slug):
     # obj = PortfolioDoc.objects.get(id=doc_id)
-    print(request.method, request.path, request.user)
     obj = get_object_or_404(PortfolioDoc, slug=doc_slug)
     template_name = "portfolio_detail.html"
     context = {"object": obj}

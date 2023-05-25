@@ -1,0 +1,9 @@
+{%block content%}
+<form method="post">
+    <fieldset>
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit">
+    </fieldset>
+</form>
+{%endblock content %}

@@ -22,6 +22,7 @@ from .views import (
     contact_page,
 )
 from portfolio.views import portfolio_detail
+from feedbackForm.views import feedback_form
 
 urlpatterns = [
     path("saif-admin/", admin.site.urls),
@@ -30,5 +31,6 @@ urlpatterns = [
     path("about/", about_page, name="about"),
     path("contact/", contact_page, name="contact"),
     # path("portfolio", portfolio_detail, name="portfolio")
-    path("portfolio/<str:doc_slug>", portfolio_detail, name="portfolio")
+    path("portfolio/<str:doc_slug>", portfolio_detail, name="portfolio"),
+    path("feedback/", feedback_form, name="feedback"),
 ]

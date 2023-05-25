@@ -1,6 +1,6 @@
 # Changing what a page looks like you start with the view. Dont do HTML
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
-from django.shortcuts import render
 from django.template.loader import get_template
 from django.http import FileResponse, Http404
 
@@ -26,3 +26,12 @@ def pdf_page(request):
     template_obj = get_template(template_name)
 
     return HttpResponse(template_obj.render(context))
+
+def portfolio_detail(request, doc_slug):
+    # obj = PortfolioDoc.objects.get(id=doc_id)
+    print(request.method, request.path, request.user)
+    obj = get_object_or_404(PortfolioDoc, slug=doc_slug)
+    template_name = "portfolio_detail.html"
+    context = {"object": obj}
+    # return render(request, "/home/saif/Projects/tryDjango/src/templates/portfolio_detail.html", context)
+    return FileResponse(obj.document, content_type='application/pdf')
