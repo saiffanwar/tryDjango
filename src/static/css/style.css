@@ -1,0 +1,57 @@
+body {
+    padding-left: 15px;
+    padding-right:15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: rgb(243,224,250);
+    background: linear-gradient(90deg, rgba(243,224,250,1) 0%, rgba(223,172,224,1) 100%, rgba(251,172,252,1) 100%);
+}
+
+h1 {
+    font-size: 24pt;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    color: purple;
+}
+
+h2.sectionHeading {
+    width = 200px;
+    text-align: center;
+    margin: 30px 0 30px 0;
+}
+
+#portraitpicture {
+    float: right;
+}
+
+#mylinks {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: justify;
+}
+
+#introMessagesection {
+    margin-right: 220px;
+    background: rgb(182,34,195);
+    background: linear-gradient(0deg, rgba(182,34,195,1) 0%, rgba(156,41,244,1) 96%);
+    padding: 20px;
+}
+
+p.introMessage {
+    font-weight: bold;
+    color: white;
+}
+
+.grid {
+    display: flex;
+}
+
+p.gridItem {
+    text-align: center;
+    flex: 1;
+}
+

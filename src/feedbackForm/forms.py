@@ -1,9 +1,8 @@
 from django import forms
-from .models import FeedbackModel
 
 
 class FeedbackForm(forms.Form):
-    class Meta:
-        model = FeedbackModel
-        fields = ["fullname", "email", "message"]
-        labels = {'fullname': "Name", "email": "Email", "message": "Feedback"}
+    name = forms.CharField(max_length=200)
+    email = forms.EmailField(max_length=200)
+    message = forms.CharField(max_length=200)
+
