@@ -3,8 +3,10 @@ body {
     padding-right:15px;
     padding-top: 15px;
     padding-bottom: 15px;
-    background: rgb(243,224,250);
-    background: linear-gradient(90deg, rgba(243,224,250,1) 0%, rgba(223,172,224,1) 100%, rgba(251,172,252,1) 100%);
+    background: rgb(182,34,195);
+    background: linear-gradient(0deg, rgba(182,34,195,1) 0%, rgba(156,41,244,1) 96%);
+    background-attachment: fixed;
+    height: 100vh;
 }
 
 h1 {
@@ -14,31 +16,41 @@ h1 {
     color: purple;
 }
 
+.title {
+    color: white;
+}
+
 h2.sectionHeading {
-    width = 200px;
     text-align: center;
     margin: 30px 0 30px 0;
 }
 
+.topbar {
+    width: 1000px;
+    margin-bottom: 30px;
+}
+
 #portraitpicture {
     float: right;
+    height: 180px;
 }
 
 #mylinks {
     margin-top: 10px;
     margin-bottom: 10px;
+    width=500px
 }
 
 p {
     font-family: "Lucida Console", "Courier New", monospace;
-    text-align: justify;
 }
 
 #introMessagesection {
-    margin-right: 220px;
+    width: 400px;
     background: rgb(182,34,195);
     background: linear-gradient(0deg, rgba(182,34,195,1) 0%, rgba(156,41,244,1) 96%);
     padding: 20px;
+    margin: 20px 20px 20px 10px;
 }
 
 p.introMessage {
@@ -48,10 +60,44 @@ p.introMessage {
 
 .grid {
     display: flex;
+    height: 400px;
 }
 
 p.gridItem {
-    text-align: center;
-    flex: 1;
+    width: 200px;
+}
+
+/*.loremipsum {
+    background: rgb(12,34,195);
+    color: white;
+    padding: 20px;
+}*/
+
+.randopara {
+    color: white;
+}
+
+.container {
+    background: images/pxfuel.jpg;
+    margin: 0 20px 0 20px;
+    padding: 20px;
+    width: 1000px;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.container:before {
+    content:"";
+    position: absolute;
+    background: inherit;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(255,255,255,0.5);
+    filter: blur(5px);
+    margin: -20px;
+
 }
 
